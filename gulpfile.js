@@ -1,7 +1,6 @@
 const babel = require('gulp-babel')
 const autoprefixer = require('gulp-autoprefixer')
 const csso = require('gulp-csso')
-const del = require('del')
 const gulp = require('gulp')
 const htmlmin = require('gulp-htmlmin')
 const runSequence = require('run-sequence')
@@ -30,23 +29,23 @@ const paths = {
   jsFiles: './src/js/*.js',
   jsDest: './dist/js',
   cssDest: './dist/styles',
-  cssDev: './src/styles/**/*.css'
+  cssDev: './src/styles/*.css'
 }
 
 // Inject in development mode
 gulp.task('inject', function() {
   return gulp
     .src('./src/*.html')
-    .pipe(inject(gulp.src(paths.cssDev), { relative: true }))
-    .pipe(inject(gulp.src('./src/js/*.js'), { relative: true }))
-    .pipe(gulp.dest('./src/tmp/'))
+    .pipe(inject(gulp.src('./src/styles/index.css'), { relative: true }))
+    .pipe(inject(gulp.src('./src/js/app.js'), { relative: true }))
+    .pipe(gulp.dest('./src/'))
 })
 
 
 // dev-mode SASS process.
 gulp.task('sass', function() {
   return gulp
-    .src('./src/styles/sass/*.sass')
+    .src('./src/styles/sass/**/**/*.sass')
     .pipe(sass())
     .on('error', function(err) {
       console.log(err.toString())
@@ -62,11 +61,11 @@ gulp.task('sass', function() {
 })
 
 
-gulp.task('watch', ['browserSync', 'sass', 'pug'], function() {
-  gulp.watch('src/styles/sass/*.sass', ['sass'])
-  gulp.watch('src/pug/*pug', ['pug'])
-  gulp.watch('src/*.html').on('change', browserSync.reload)
-  gulp.watch('src/js/**/*.js').on('change', browserSync.reload)
+gulp.task('watch', ['browserSync', 'sass', 'pug', 'inject'], function() {
+  gulp.watch('src/styles/sass/**/*.sass', ['sass'], browserSync.reload)
+  gulp.watch('src/templates/**/*.pug', ['pug'], ['inject'])
+  gulp.watch('src/*.html').on('change', browserSync.reload, ['inject'])
+  gulp.watch('src/**/*.js').on('change', browserSync.reload)
 })
 
 gulp.task('browserSync', function() {
@@ -80,7 +79,7 @@ gulp.task('browserSync', function() {
 
 gulp.task('pug', function() {
   return gulp
-    .src('./src/includes/*.pug')
+    .src('./src/templates/*.pug')
     .pipe(
       pug({
         doctype: 'html',
@@ -89,3 +88,5 @@ gulp.task('pug', function() {
     )
     .pipe(gulp.dest('./src'))
 })
+
+gulp.task('default', ['watch'])

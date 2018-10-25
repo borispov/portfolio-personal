@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Borisio</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700,900|Roboto:300,400,500,700">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/index.css">
+    <!-- inject:css -->
+    <!-- endinject -->
+  </head>
+  <body>
+    <div class="nav">
+      <ul class="nav__list">
+        <li class="nav__item"><a class="nav__link whitenav" href="">Contact</a></li>
+        <li class="nav__item"><a class="nav__link whitenav" href="">Portfolio</a></li>
+      </ul>
+    </div>
+    <div class="main">
+      <div class="personal">
+        <div class="personal-info">
+          <h1 class="personal-info__greeting -semibold">Hi !</h1>
+          <h1 class="personal-info__name -heavy">I'M Boris Povolotsky</h1>
+          <h3 class="personal-info__occ -semibold">Front End Developer / Social Worker</h3>
+          <p class="personal-info__bg -ita">
+            Looking for my first dev job, while exploring, experimenting and mostly having fun building stuff. I currently work as a Social Worker 
+            until I land a satisfying job in the industry. 
+          </p>
+        </div>
+        <div class="personal-img">
+          <div class="personal-img__photo -circ"></div>
+        </div>
+      </div>
+      <div class="downarrow -abs"><a class="arrow-container" href="#">
+          <div class="arrow"></div>
+          <div class="arrow"></div>
+          <div class="arrow"></div></a></div>
+    </div>
+    <div class="sidebar -abs">
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+    </div>
+    <section class="portfolio">
+      <div class="frame">
+        <h2 class="portfolio__title">My Latest Works</h2>
+        <div class="cards">
+          <div class="card">
+            <h4 class="card__title">Linda Bistro</h4>
+            <div class="card__thumbnail">
+              <div class="card__icons"> <i class="fab fa-js-square fa-2x"></i><i class="fab fa-react fa-2x"></i><i class="fab fa-sass fa-2x"></i></div>
+              <p class="card__description">Static website made for a local bistro in my town, basic features with beautiful design that reflects the place atmosphere and personality.</p>
+            </div>
+            <div class="btns"> 
+              <button class="card__btn" type="submit">Demo</button>
+              <button class="card__btn" type="submit">Code</button>
+            </div>
+          </div>
+          <div class="card">
+            <h4 class="card__title">Typing Game</h4>
+            <div class="card__thumbnail">
+              <div class="card__icons"><i class="fab fa-react fa-2x"></i><i class="fab fa-sass fa-2x"></i></div>
+              <p class="card__description">A typing game made with common score calculation. Did not implement for MOBILE usage. This project enhanced my React skills, practiced managing state without Redux. </p>
+            </div>
+            <div class="btns">
+              <button class="card__btn" type="submit">Demo</button>
+              <button class="card__btn" type="submit">Code</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="downarrow -abs"><a class="arrow-container" href="#">
+          <div class="arrow"></div>
+          <div class="arrow"></div>
+          <div class="arrow"></div></a></div>
+    </section>
+    <section class="project-section">
+      <h1 class="title -heavy -ita">More Projects</h1>
+      <div class="containerflex">
+        <div class="projects">
+          <div class="project"><a class="project__link" href="#">
+              <h3 class="project__title">“ phone-fmt “ </h3></a>
+            <p class="project__para">NPM Package - validate & format israeli numbers</p>
+          </div>
+          <div class="project"><a class="project__link" href="#">
+              <h3 class="project__title">“ Weather App "</h3></a>
+            <p class="project__para">5 days forecast based on location & search option.</p>
+          </div>
+          <div class="project"><a class="project__link" href="#">
+              <h3 class="project__title">“ Tomatoro Pomadoro "</h3></a>
+            <p class="project__para">Pomodoro Clock, built for React practice.</p>
+          </div>
+        </div>
+        <div class="link-github">
+          <h2 class="link-github__text">For further work,</h2>
+          <h2 class="link-github__text">Check me out </h2>
+          <div class="link-github__link"><i class="fab fa-github"></i><a class="-heavy -ita" href="https://github.com/borispov">GitHub</a></div>
+        </div>
+      </div>
+    </section>
+    <section class="contact">
+      <div class="contact-sections">
+        <div class="social">
+          <h3 class="social__title">Interested in working together? Let’s talk.</h3>
+          <h3 class="social__email"><span>boristofu</span>@gmail.com </h3>
+          <div class="social__icons"><i class="fab fa-github"></i><i class="fab fa-facebook"></i><i class="fab fa-linkedin"></i></div>
+        </div>
+        <div class="general">
+          <h1 class="general__name">Boris Povolotsky</h1>
+          <h2 class="general__occ">Front End</h2>
+          <h4 class="general__location">Based in Israel</h4>
+        </div>
+      </div>
+    </section>
+    <!-- inject:js -->
+    <script src="./js/app.js"></script>
+    <!-- endinject -->
+  </body>
+</html>

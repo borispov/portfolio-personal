@@ -1,0 +1,22 @@
+.sidebar
+  height: auto
+  width: auto
+  top: 50%
+  left: 1.5%
+  transform: translateY(-50%)
+  .circle
+    position: relative
+    margin-top: 8px
+    border-color: #707070
+    border-radius: 50%
+    background: #373540
+    +size(12px, 12px)
+    +opacity(0.8)
+
+@media (max-width: 780px)
+  .sidebar
+    top: 8%
+    left: 91%
+    z-index: 3
+    .circle
+      display: inline-block

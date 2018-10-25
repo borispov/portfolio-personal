@@ -1,0 +1,73 @@
+.contact
+  background: linear-gradient(to bottom, $main-red 40%, #B10835 60%)
+  min-height: 100vh
+  .contact-sections
+    display: flex
+    flex-flow: row-reverse
+    // justify-content: space-between
+    // align-items: center
+    padding-top: 25vh
+    .general
+      margin: 0 40px
+      width: calc(100% - 5em)
+      text-align: right
+      .general__name
+        color: $white-pure
+        margin: 0 0 51px 0
+        text-shadow: 0 3px 6px rgba(20,20,20,0.2)
+      .general__occ
+        color: $light-grey
+        margin: 0 0 81px 0
+        text-shadow: 0 3px 6px rgba(20,20,20,0.2)
+      .general__location
+        color: $light-grey
+        text-shadow: 0 3px 6px rgba(20,20,20,0.2)
+
+
+
+    .social
+      margin: 0 40px
+      width: calc(100% - 5em)
+      .social__title
+        color: $light-text
+        padding-bottom: 31px
+        max-width: calc(100% - 5em)
+      .social__email
+        text-shadow: 0 3px 6px rgba(20,20,20,0.2)
+        padding-bottom: 51px
+        color: $text-green
+        font-style: italic
+        font-weight: $heavy
+        span
+          color: $main-text
+      .social__icons
+        display: flex
+        justify-content: flex-start
+        i 
+          text-shadow: 0 3px 6px rgba(20,20,20,0.2)
+          color: $text-green
+          margin: 0 1em 0 1.25em
+          font-size: 32px
+
+@media (max-width: 769px)
+  .contact
+    min-height: 70vh
+    .contact-sections
+      display: block
+      padding-top: 15vh
+      .general
+        text-align: center
+      .social
+        text-align: center
+        .social__title
+          padding: 0 0 0.6em
+          max-width: 100%
+        &__email
+          padding-bottom: 0.6em
+        .social__icons
+          margin-left: auto
+          margin-right: auto
+          font-size: 2.15em
+          margin-bottom: 2em
+          i
+            margin: 0 0.5em
