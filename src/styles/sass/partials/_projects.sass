@@ -18,6 +18,7 @@
     // width: calc(100% - 25em)
   .project
     margin: 1em 0
+    max-width: 420px
     .project__link
       color: $main-red
     .project__title
@@ -36,6 +37,7 @@
     margin-top: 5em
     color: $main-charcoal
     font-style: italic
+    max-width: 420px    
     &__link
       i
         font-size: 1.15em
@@ -45,12 +47,47 @@
       // padding-left: 35px
       font-size: 2.2em
       color: $main-text
-// @media (min-width: 426px)
-//   .projects
-//     width: calc(100% - 5em)
-// @media (min-width: 769px)
-//   .projects
-//     width: calc(100% - 10em)
+@media (max-width: 768px)
+  .containerflex
+    display: flex
+    // margin: 0
+    width: 100%
+    max-width: 100%
+    flex-direction: column
+  .project
+    width: auto
+    max-width: auto
+  .projects
+    display: block
+    text-align: center
+    width: auto
+    max-width: auto
+    .project__para
+      width: auto
+      max-width: auto
+  // .link-github
+  //   max-width: 100%
+  //   margin: 0 auto
+    // display: block
+@media (min-width: 769px)
+  .containerflex
+    display: block
+  .projects
+    display: block
+    width: calc(100% - 10em)
 @media (min-width: 1025px)
   .projects
     width: calc(100% - 20em)
+
+@media (max-width: 768px)
+  .containerflex
+    display: block
+    margin: 0 auto
+    width: 100% !important
+    .projects
+      display: block
+      margin: 0 auto
+    .link-github
+      text-align: center
+      display: block
+      margin: 1em auto 2em

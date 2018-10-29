@@ -4,10 +4,10 @@
   .contact-sections
     display: flex
     flex-flow: row-reverse
-    // justify-content: space-between
-    // align-items: center
+    justify-content: center
     padding-top: 25vh
     .general
+      flex-basis: 500px
       margin: 0 40px
       width: calc(100% - 5em)
       text-align: right
@@ -24,14 +24,14 @@
         text-shadow: 0 3px 6px rgba(20,20,20,0.2)
 
 
-
     .social
+      flex-basis: 380px
       margin: 0 40px
       width: calc(100% - 5em)
       .social__title
         color: $light-text
         padding-bottom: 31px
-        max-width: calc(100% - 5em)
+        // max-width: calc(100% - 5em)
       .social__email
         text-shadow: 0 3px 6px rgba(20,20,20,0.2)
         padding-bottom: 51px
@@ -42,12 +42,13 @@
           color: $main-text
       .social__icons
         display: flex
-        justify-content: flex-start
+        justify-content: space-around
         i 
           text-shadow: 0 3px 6px rgba(20,20,20,0.2)
           color: $text-green
-          margin: 0 1em 0 1.25em
-          font-size: 32px
+          font-size: 2.5em
+          &:nth-of-type(2)
+            margin: 0 2em 0 2em
 
 @media (max-width: 769px)
   .contact
@@ -67,7 +68,7 @@
         .social__icons
           margin-left: auto
           margin-right: auto
-          font-size: 2.15em
           margin-bottom: 2em
+          // font-size: 10px
           i
             margin: 0 0.5em

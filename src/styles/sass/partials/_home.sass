@@ -1,18 +1,26 @@
 .main
-  // position: relative
+  position: relative
   display: flex
   min-height: 100vh
   background-color: $main-red
   padding-top: 22vh
   justify-content: center
+  padding-bottom: 22vh
 
 .personal
   display: flex
+  flex-flow: row wrap
   flex: 0 1 auto
+  padding-left: calc(100vw * 0.15)
+  padding-right: calc(100vw * 0.15)
+  justify-content: space-between
   .personal-info
+    order: 1
     max-width: 970px
     display: flex
     flex-flow: column wrap
+    // flex-shrink: 10
+    flex-basis: 15em
     &__greeting
       color: $white-pure
       font-size: 58px
@@ -25,13 +33,18 @@
     &__occ
       color: $white-text
       line-height: 1.35
-    &__bg
-      max-width: 85%
-      color: darken($white-text, 6)
-      font-size: 1.38em
+  .personal-info__bg
+    flex-basis: 70%
+    flex-shrink: 1
+    order: 3
+    max-width: 70%
+    color: darken($white-text, 6)
+    font-size: 1.38em
 
   .personal-img
-    // +size(450px, 250px)
+    order: 2
+    flex-shrink: 0
+    flex-basis: 10em
     background-color: $main-red
     &__photo
       +size(300px, 300px)
@@ -45,37 +58,32 @@
       max-width: 100%
 
 @media (max-width: 780px)
-  // max-width: 75%
   .main
     padding: 0
     padding-top: 22vh
-    padding-bottom: 21vh
+    padding-bottom: 12vh
     display: block
     text-align: center
 
     .personal
       display: block
+      padding-left: calc(100vw * 0.04)
+      padding-right: calc(100vw * 0.04)
       .personal-info
         &__occ
           padding-top: 7px
         &__bg
           padding-top: 12px
+
       & *
         margin-left: auto
         margin-right: auto
       .personal-img
         &__photo
           max-width: 80%
-          margin-top: 21px
+          margin-top: 51px
+
 @media (min-width: 781px)
   .personal
-    padding-left: calc(100vw * 0.08)
-    padding-right: calc(100vw * 0.08)
-    .personal-info
-      &__bg
-        padding-top: 5px
-
-@media (min-width: 980px)
-  .personal
-    padding-left: calc(100vw * 0.15)
-    padding-right: calc(100vw * 0.15)
+    padding-left: calc(100vw * 0.05)
+    padding-right: calc(100vw * 0.05)

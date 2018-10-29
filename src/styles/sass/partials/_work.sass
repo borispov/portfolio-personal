@@ -1,4 +1,7 @@
 .frame
+  @media (max-width: 1200px)
+    margin-left: calc(100vw * 0.05)
+    margin-right: calc(100vw * 0.05)
   margin-left: 150px
   margin-right: 150px
   padding: 4em 5em
@@ -11,7 +14,6 @@
   position: relative
   padding-top: 15vh
   padding-bottom: 15vh
-  // background: linear-gradient(to bottom, $main-red 40%, #66221F 90%)
   background: linear-gradient(to bottom, $main-metal 40%, $main-charcoal 90%)
   min-height: 100vh
   &__title
@@ -24,11 +26,7 @@
   flex-wrap: wrap
   justify-content: space-evenly
   .card
-    .card__icons
-      text-align: center
-      color: $main-red
-      & *
-        margin: 0 15px 10px
+    margin-top: 20px
     display: flex
     flex-flow: column nowrap
     justify-content: space-between
@@ -39,6 +37,11 @@
     max-width: 300px
     height: 350px
     border-radius: 4px
+    .card__icons
+      text-align: center
+      color: $main-red
+      & *
+        margin: 0 15px 10px
     .card__title
       padding-top: 1em
       padding-bottom: 1em
@@ -65,3 +68,13 @@
       box-shadow: 0 6px 16px 19px rgba(20,20,20,0.2) 0 1px 0 6px rgba(0,0,0,0.16)
       transform: translateY(-4px)
       transition: all .3s ease-in-out
+
+@media (max-width: 780px)
+  .portfolio
+    padding-top: 0
+    padding-bottom: 0
+    .card
+      background: #14191e
+  .frame
+    margin-left: 0
+    margin-right: 0
