@@ -347,11 +347,12 @@ html {
   .project-section .containerflex {
     display: flex;
     margin: 4em auto 0;
-    width: calc(100% - 25em);
+    width: calc(100% - 15em);
     justify-content: space-between; }
   .project-section .projects {
     display: flex;
-    flex-flow: column wrap; }
+    flex-flow: column wrap;
+    margin: 4em auto; }
   .project-section .project {
     margin: 1em 0;
     max-width: 420px; }
@@ -403,8 +404,7 @@ html {
   .containerflex {
     display: block; }
   .projects {
-    display: block;
-    width: calc(100% - 10em); } }
+    display: block; } }
 
 @media (min-width: 1025px) {
   .projects {
@@ -448,7 +448,7 @@ html {
         color: #D0CCC6;
         text-shadow: 0 3px 6px rgba(20, 20, 20, 0.2); }
     .contact .contact-sections .social {
-      flex-basis: 380px;
+      flex-basis: 500px;
       margin: 0 40px;
       width: calc(100% - 5em); }
       .contact .contact-sections .social .social__title {
@@ -463,6 +463,7 @@ html {
         .contact .contact-sections .social .social__email span {
           color: #354A57; }
       .contact .contact-sections .social .social__icons {
+        max-width: 380px;
         display: flex;
         justify-content: space-around; }
         .contact .contact-sections .social .social__icons i {
