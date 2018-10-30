@@ -49,7 +49,13 @@ button {
   padding: 0.25em 1em;
   font-size: 1em;
   font-weight: 600; }
-  button:hover, button:active, button:focus {
+
+.card__btn {
+  border-radius: 2px;
+  padding: 0.25em 1em;
+  font-size: 1em;
+  font-weight: 600; }
+  .card__btn:hover, .card__btn:active, .card__btn:focus {
     outline: none; }
 
 p {
@@ -481,6 +487,17 @@ html {
       padding-top: 15vh; }
       .contact .contact-sections .general {
         text-align: center; }
+        .contact .contact-sections .general .general__name {
+          margin-bottom: 18px; }
+        .contact .contact-sections .general .flex-mobile {
+          display: flex;
+          flex-direction: row nowrap;
+          justify-content: center; }
+        .contact .contact-sections .general .general__occ {
+          margin-right: 30px;
+          margin-bottom: 20px; }
+        .contact .contact-sections .general .general__location {
+          margin-left: 30px; }
       .contact .contact-sections .social {
         text-align: center; }
         .contact .contact-sections .social .social__title {

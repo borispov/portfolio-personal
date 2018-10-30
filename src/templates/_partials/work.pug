@@ -1,4 +1,4 @@
-section.portfolio
+section.portfolio#portfolio
   .frame
     h2.portfolio__title My Latest Works
     .cards
@@ -11,9 +11,9 @@ section.portfolio
             i.fab.fa-sass.fa-2x
 
           p.card__description Static website made for a local bistro in my town, basic features with beautiful design that reflects the place atmosphere and personality.
-        .btns  
-          button(type="submit").card__btn Demo
-          button(type="submit").card__btn Code
+        .btns
+          a(href="https://linda-bistro.herokuapp.com" title="Linda Bistro").card__btn Demo
+          a(href="https://github.com/borispov/linda-bistro" title="Linda @GitHub").card__btn Code
 
       .card
         h4.card__title Typing Game
@@ -23,7 +23,7 @@ section.portfolio
             i.fab.fa-sass.fa-2x
           p.card__description A typing game made with common score calculation. Did not implement for MOBILE usage. This project enhanced my React skills, practiced managing state without Redux. 
         .btns
-          button(type="submit").card__btn Demo
-          button(type="submit").card__btn Code
+          a(href="https://speedtyping-game.herokuapp.com").card__btn Demo
+          a(href="https://github.com/borispov/typing-game", title="Code @GitHub").card__btn Code
           
   include ../components/down

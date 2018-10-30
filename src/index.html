@@ -14,11 +14,11 @@
   <body>
     <div class="nav">
       <ul class="nav__list">
-        <li class="nav__item"><a class="nav__link whitenav" href="">Contact</a></li>
-        <li class="nav__item"><a class="nav__link whitenav" href="">Portfolio</a></li>
+        <li class="nav__item"><a class="nav__link whitenav -scroll" href="#contact">Contact</a></li>
+        <li class="nav__item"><a class="nav__link whitenav -scroll" href="#portfolio">Portfolio</a></li>
       </ul>
     </div>
-    <div class="main">
+    <div class="main" id="home">
       <div class="ui container">
         <div class="personal">
           <div class="personal-info">
@@ -35,13 +35,12 @@
           </div>
         </div>
       </div>
+      <div class="downarrow -abs"><a class="arrow-container -scroll" href="#">
+          <div class="arrow"></div>
+          <div class="arrow"></div>
+          <div class="arrow"></div></a></div>
     </div>
-    <div class="sidebar -abs">
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-    </div>
-    <section class="portfolio">
+    <section class="portfolio" id="portfolio">
       <div class="frame">
         <h2 class="portfolio__title">My Latest Works</h2>
         <div class="cards">
@@ -51,10 +50,7 @@
               <div class="card__icons"> <i class="fab fa-js-square fa-2x"></i><i class="fab fa-react fa-2x"></i><i class="fab fa-sass fa-2x"></i></div>
               <p class="card__description">Static website made for a local bistro in my town, basic features with beautiful design that reflects the place atmosphere and personality.</p>
             </div>
-            <div class="btns"> 
-              <button class="card__btn" type="submit">Demo</button>
-              <button class="card__btn" type="submit">Code</button>
-            </div>
+            <div class="btns"><a class="card__btn" href="https://linda-bistro.herokuapp.com" title="Linda Bistro">Demo</a><a class="card__btn" href="https://github.com/borispov/linda-bistro" title="Linda @GitHub">Code</a></div>
           </div>
           <div class="card">
             <h4 class="card__title">Typing Game</h4>
@@ -62,32 +58,29 @@
               <div class="card__icons"><i class="fab fa-react fa-2x"></i><i class="fab fa-sass fa-2x"></i></div>
               <p class="card__description">A typing game made with common score calculation. Did not implement for MOBILE usage. This project enhanced my React skills, practiced managing state without Redux. </p>
             </div>
-            <div class="btns">
-              <button class="card__btn" type="submit">Demo</button>
-              <button class="card__btn" type="submit">Code</button>
-            </div>
+            <div class="btns"><a class="card__btn" href="https://speedtyping-game.herokuapp.com">Demo</a><a class="card__btn" href="https://github.com/borispov/typing-game" title="Code @GitHub">Code</a></div>
           </div>
         </div>
       </div>
-      <div class="downarrow -abs"><a class="arrow-container" href="#">
+      <div class="downarrow -abs"><a class="arrow-container -scroll" href="#">
           <div class="arrow"></div>
           <div class="arrow"></div>
           <div class="arrow"></div></a></div>
     </section>
-    <section class="project-section">
+    <section class="project-section" id="portfolio2">
       <div class="ui container">
         <h1 class="title -heavy -ita">More Projects</h1>
         <div class="containerflex">
           <div class="projects">
-            <div class="project"><a class="project__link" href="#">
+            <div class="project"><a class="project__link" href="https://github.com/borispov/phone-fmt">
                 <h3 class="project__title">“ phone-fmt “ </h3></a>
               <p class="project__para">NPM Package - validate & format israeli numbers</p>
             </div>
-            <div class="project"><a class="project__link" href="#">
+            <div class="project"><a class="project__link" href="https://github.com/borispov/weather-app">
                 <h3 class="project__title">“ Weather App "</h3></a>
               <p class="project__para">5 days forecast based on location & search option.</p>
             </div>
-            <div class="project"><a class="project__link" href="#">
+            <div class="project"><a class="project__link" href="https://github.com/borispov/Tomatoro-pomadoro">
                 <h3 class="project__title">“ Tomatoro Pomadoro "</h3></a>
               <p class="project__para">Pomodoro Clock, built for React practice.</p>
             </div>
@@ -95,12 +88,12 @@
           <div class="link-github">
             <h2 class="link-github__text">For further work,</h2>
             <h2 class="link-github__text">Check me out </h2>
-            <div class="link-github__link"><i class="fab fa-github"></i><a class="-heavy -ita" href="https://github.com/borispov">GitHub</a></div>
+            <div class="link-github__link"><a href="https://github.com/borispov"> <i class="fab fa-github"></i></a><a class="-heavy -ita" href="https://github.com/borispov">GitHub</a></div>
           </div>
         </div>
       </div>
     </section>
-    <section class="contact">
+    <section class="contact" id="contact">
       <div class="contact-sections">
         <div class="social">
           <h3 class="social__title">Interested in working together? Let’s talk.</h3><a href="mailto:boristofu@gmail.com">
@@ -109,8 +102,10 @@
         </div>
         <div class="general">
           <h1 class="general__name">Boris Povolotsky</h1>
-          <h2 class="general__occ">Front End</h2>
-          <h4 class="general__location">Based in Israel</h4>
+          <div class="flex-mobile">
+            <h2 class="general__occ">Front End</h2>
+            <h4 class="general__location">Based in Israel</h4>
+          </div>
         </div>
       </div>
     </section>
