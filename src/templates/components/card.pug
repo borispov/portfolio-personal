@@ -1,0 +1,12 @@
+mixin card(title, description, demoLink, gitLink)
+  .card
+    h4.card__title= title
+    .card__thumbnail
+      .card__icons
+        if block
+          block
+      
+      p.card__description= description
+    .btns
+      a(href=demoLink title=title).card__btn Demo
+      a(href=gitLink title='Code @GitHub').card__btn Code

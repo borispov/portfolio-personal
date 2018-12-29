@@ -90,3 +90,65 @@ gulp.task('pug', function() {
 })
 
 gulp.task('default', ['watch'])
+
+gulp.task('sassBuild', function() {
+  return (
+    gulp
+      .src('./src/styles/sass/*.sass')
+      .pipe(
+        sass({
+          precision: 10,
+          outputStyle: 'nested',
+          includePaths: ['.'],
+          onError: console.error.bind(console, 'Sass error:')
+        })
+      )
+      .pipe(autoprefixer({ browsers: AUTOPREFIXER_BROWSERS }))
+      // Minify the file
+      .pipe(csso())
+      // Output
+      .pipe(gulp.dest('./dist/styles/css'))
+  )
+})
+
+
+
+gulp.task('pages', function() {
+  return gulp
+    .src(['./src/*.html'])
+    .pipe(
+      htmlmin({
+        collapseWhitespace: true,
+        removeComments: false
+      })
+    )
+    .pipe(gulp.dest('./dist'))
+})
+
+gulp.task('scripts', function() {
+  return (
+    gulp
+      .src(paths.jsFiles)
+      .pipe(concat('app.js'))
+      .pipe(rename('app.min.js'))
+      .pipe(uglify())
+      .pipe(gulp.dest('./dist/js'))
+      .on('error', function(err) {
+        console.log(err.toString())
+      })
+  )
+})
+
+
+gulp.task('injectBuild', function() {
+  return gulp
+    .src('./dist/*.html')
+    .pipe(inject(gulp.src(paths.cssDest + '/**/*.css'), { relative: true }))
+    .pipe(inject(gulp.src(paths.jsDest + '/*.min.js'), { relative: true }))
+    .pipe(gulp.dest('./dist'))
+})
+
+
+gulp.task('build', function() {
+  runSequence('sassBuild', 'pages', 'scripts', 'injectBuild')
+})

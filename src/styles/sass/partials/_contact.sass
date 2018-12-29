@@ -41,13 +41,18 @@
         span
           color: $main-text
       .social__icons
+        margin-top: 30px
         max-width: 380px
         display: flex
-        justify-content: space-around
+        justify-content: space-between
         i 
           text-shadow: 0 3px 6px rgba(20,20,20,0.2)
           color: $text-green
           font-size: 2.5em
+          transition: all 0.3s ease-in-out
+          &:hover
+            color: $main-charcoal
+            transition: all 0.3s ease-in-out
           &:nth-of-type(2)
             margin: 0 2em 0 2em
 
