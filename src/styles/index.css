@@ -306,9 +306,11 @@ html {
     border-radius: 4px;
     transition: all 0.2s ease-in-out; }
     .cards .card:hover {
-      transition: all 0.5s ease-in-out; }
+      border-radius: 8px;
+      transition: all 0.3s ease-in-out; }
       .cards .card:hover:after {
-        transition: all 0.6s ease-in-out;
+        border-radius: 8px;
+        transition: all 0.1s ease-in-out;
         opacity: 0.8;
         filter: blur(1px); }
     .cards .card:after {
