@@ -143,6 +143,74 @@ html {
   position: relative;
   max-width: 1127px; }
 
+.hidden {
+  opacity: 0 !important; }
+
+.fade-in {
+  animation: 4s fade-in-element !important; }
+
+.card {
+  animation: fade-in-element; }
+  .card:nth-child(1) {
+    animation-delay: 0.05s; }
+
+.card {
+  animation: fade-in-element; }
+  .card:nth-child(2) {
+    animation-delay: 0.1s; }
+
+.card {
+  animation: fade-in-element; }
+  .card:nth-child(3) {
+    animation-delay: 0.15s; }
+
+.card {
+  animation: fade-in-element; }
+  .card:nth-child(4) {
+    animation-delay: 0.2s; }
+
+.card {
+  animation: fade-in-element; }
+  .card:nth-child(5) {
+    animation-delay: 0.25s; }
+
+.card {
+  animation: fade-in-element; }
+  .card:nth-child(6) {
+    animation-delay: 0.3s; }
+
+.card {
+  animation: fade-in-element; }
+  .card:nth-child(7) {
+    animation-delay: 0.35s; }
+
+.card {
+  animation: fade-in-element; }
+  .card:nth-child(8) {
+    animation-delay: 0.4s; }
+
+.card {
+  animation: fade-in-element; }
+  .card:nth-child(9) {
+    animation-delay: 0.45s; }
+
+.card {
+  animation: fade-in-element; }
+  .card:nth-child(10) {
+    animation-delay: 0.5s; }
+
+.card {
+  animation: fade-in-element; }
+  .card:nth-child(11) {
+    animation-delay: 0.55s; }
+
+@keyframes fade-in-element {
+  from {
+    opacity: 0;
+    transform: scale(0.7, 0.7); }
+  to {
+    opacity: 1; } }
+
 .-ita {
   font-style: italic !important; }
 
@@ -184,6 +252,7 @@ html {
   display: flex;
   min-height: 100vh;
   background-color: #CC443D;
+  background-color: rgba(130, 59, 23, 0.72);
   padding-top: 22vh;
   justify-content: center;
   padding-bottom: 22vh; }
@@ -221,10 +290,10 @@ html {
     color: #fff1db;
     font-size: 1.38em; }
   .personal .personal-img {
+    animation: fade-in-element 0.4s;
     order: 2;
     flex-shrink: 0;
-    flex-basis: 10em;
-    background-color: #CC443D; }
+    flex-basis: 10em; }
     .personal .personal-img__photo {
       width: 300px;
       height: 300px;
@@ -283,6 +352,7 @@ html {
   background: linear-gradient(to bottom, #253540 40%, #354A57 90%);
   min-height: 100vh; }
   .portfolio__title {
+    font-size: 2rem;
     color: #FFFDFA;
     text-align: center;
     padding-bottom: 50px; }
@@ -303,21 +373,19 @@ html {
     box-shadow: 0 3px 6px 6px rgba(20, 20, 20, 0.08);
     max-width: 300px;
     height: 350px;
-    border-radius: 4px;
-    transition: all 0.2s ease-in-out; }
+    border-radius: 4px; }
     .cards .card:hover {
-      border-radius: 8px;
-      transition: all 0.3s ease-in-out; }
+      border-radius: 8px; }
       .cards .card:hover:after {
         border-radius: 8px;
-        transition: all 0.1s ease-in-out;
         opacity: 0.8;
         filter: blur(1px); }
     .cards .card:after {
       transition: all 0.2s ease-in-out;
       content: '';
       position: absolute;
-      background: rgba(89, 18, 161, 0.9);
+      background: #5912a1;
+      background: #141419;
       opacity: 0.2;
       left: 0;
       right: 0;

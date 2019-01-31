@@ -1,3 +1,25 @@
+const animeScrolledTo = () => {
+  let elements, winHeight
+  const init = () => {
+    elements = document.querySelectorAll('.hidden')
+    winHeight = window.innerHeight
+    window.addEventListener('scroll', checkPos);
+    window.addEventListener('resize', init);
+    checkPos()
+  }
+  const checkPos = () => {
+    for (var i = 0; i < elements.length; i++) {
+      let posFromTop = elements[i].getBoundingClientRect().top
+      if (posFromTop - winHeight <= 0) {
+        addClass(elements[i], 'fade-in')
+        removeClass(elements[i], 'hidden')
+      }
+
+    }
+  }
+  return { init }
+}
+
 const smoothScroll = () => {
   
   const aLinks = document.querySelectorAll('.-scroll')
@@ -53,6 +75,7 @@ const smoothScroll = () => {
 }
 
 window.onload = function() {
+  animeScrolledTo().init()
   smoothScroll()
   const arrowScroll = document.querySelectorAll('.downarrow')
   for (x of arrowScroll) {

@@ -17,6 +17,7 @@
   background: linear-gradient(to bottom, $main-metal 40%, $main-charcoal 90%)
   min-height: 100vh
   &__title
+    font-size: 2rem
     color: $white-text
     text-align: center
     padding-bottom: 50px
@@ -25,14 +26,6 @@
   display: flex
   flex-wrap: wrap
   justify-content: space-evenly
-
-  // .card__layer
-  //   height: 350px
-  //   width: 300px
-  //   background: hsla(270, 80%, 35%, 0.9)
-  //   opacity: 0.4
-  //   &:hover
-  //     opacity: 0
 
   .card
     position: relative
@@ -47,14 +40,14 @@
     max-width: 300px
     height: 350px
     border-radius: 4px
-    transition: all 0.2s ease-in-out
+    // transition: all 0.2s ease-in-out
+
     &:hover
       border-radius: 8px
-      transition: all 0.3s ease-in-out
+      // transition: all 0.3s ease-in-out
       &:after
-        // z-index: 1
         border-radius: 8px
-        transition: all 0.1s ease-in-out
+        // transition: all 0.1s ease-in-out
         opacity: 0.8
         filter: blur(1px)
 
@@ -62,7 +55,8 @@
       transition: all 0.2s ease-in-out
       content: ''
       position: absolute
-      background: hsla(270, 80%, 35%, 0.9)
+      background: hsla(270, 80%, 35%, 1)
+      background: rgba(20,20,25,1)
       opacity: 0.2
       left: 0
       right: 0
@@ -106,11 +100,9 @@
       display: flex
       justify-content: space-between
 
-    // transition: all .3s ease-in-out
     &:hover
       box-shadow: 0 6px 16px 19px rgba(20,20,20,0.2) 0 1px 0 6px rgba(0,0,0,0.16)
       transform: translateY(-4px)
-      // transition: all .3s ease-in-out
 
 @media (max-width: 780px)
   .portfolio

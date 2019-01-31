@@ -92,3 +92,22 @@ a
 .wrapper
   position: relative
   max-width: 1127px
+
+.hidden 
+  opacity: 0 !important
+
+.fade-in
+  animation: 4s fade-in-element !important
+
+@for $i from 1 to 12
+  .card
+    animation: fade-in-element
+    &:nth-child(#{$i})
+      animation-delay: $i * (0.05s)
+
+@keyframes fade-in-element
+  from 
+    opacity: 0
+    transform: scale(.7,.7)
+  to
+    opacity: 1

@@ -3,6 +3,8 @@
   display: flex
   min-height: 100vh
   background-color: $main-red
+  background-color: hsla(20, 70%, 30, 0.72)
+  // background-color: $light-grey
   padding-top: 22vh
   justify-content: center
   padding-bottom: 22vh
@@ -23,15 +25,18 @@
     flex-basis: 15em
     &__greeting
       color: $white-pure
+      // color: $main-metal
       font-size: 58px
       padding-bottom: 50px
       line-height: 1
     &__name
       color: $main-text
+      // color: $main-metal
       text-decoration-line: underline
       line-height: 1.5
     &__occ
       color: $white-text
+      // color: $white-pure
       line-height: 1.35
   .personal-info__bg
     flex-basis: 70%
@@ -39,13 +44,15 @@
     order: 3
     max-width: 70%
     color: darken($white-text, 6)
+    // color: $bg-3
     font-size: 1.38em
 
   .personal-img
+    animation: fade-in-element 0.4s
     order: 2
     flex-shrink: 0
     flex-basis: 10em
-    background-color: $main-red
+    // background-color: $main-red
     &__photo
       +size(300px, 300px)
       background: url('../../assets/img/profile.png') no-repeat

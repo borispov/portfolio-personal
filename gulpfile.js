@@ -1,17 +1,18 @@
-const babel = require('gulp-babel')
-const autoprefixer = require('gulp-autoprefixer')
-const csso = require('gulp-csso')
-const gulp = require('gulp')
-const htmlmin = require('gulp-htmlmin')
-const runSequence = require('run-sequence')
-const uglify = require('gulp-uglify-es').default
-const sass = require('gulp-sass')
-const pug = require('gulp-pug')
-const watch = require('gulp-watch')
-const browserSync = require('browser-sync').create()
-const rename = require('gulp-rename')
-const concat = require('gulp-concat')
-const inject = require('gulp-inject')
+const babel         = require('gulp-babel')
+const autoprefixer  = require('gulp-autoprefixer')
+const csso          = require('gulp-csso')
+const gulp          = require('gulp')
+const htmlmin       = require('gulp-htmlmin')
+const runSequence   = require('run-sequence')
+const uglify        = require('gulp-uglify-es').default
+const sass          = require('gulp-sass')
+const pug           = require('gulp-pug')
+const watch         = require('gulp-watch')
+const browserSync   = require('browser-sync').create()
+const rename        = require('gulp-rename')
+const concat        = require('gulp-concat')
+const inject        = require('gulp-inject')
+const ghPages       = require('gulp-gh-pages')
 
 var AUTOPREFIXER_BROWSERS = [
   'ie >= 10',
@@ -41,7 +42,6 @@ gulp.task('inject', function() {
     .pipe(gulp.dest('./src/'))
 })
 
-
 // dev-mode SASS process.
 gulp.task('sass', function() {
   return gulp
@@ -59,7 +59,6 @@ gulp.task('sass', function() {
       })
     )
 })
-
 
 gulp.task('watch', ['browserSync', 'sass', 'pug', 'inject'], function() {
   gulp.watch('src/styles/sass/**/*.sass', ['sass'], browserSync.reload)
@@ -152,3 +151,8 @@ gulp.task('injectBuild', function() {
 gulp.task('build', function() {
   runSequence('sassBuild', 'pages', 'scripts', 'injectBuild')
 })
+
+gulp.task('deploy', function() {
+  return gulp.src('./dist/**/*')
+    .pipe(ghPages());
+});
