@@ -4,8 +4,17 @@ include ../components/nav.pug
   .ui.container
     .personal
       .personal-info
+        span(style="color: #354A57") <
         h1.personal-info__greeting.-semibold Hi !
-        h1.personal-info__name.-heavy I'M Boris #[span(style="display: block") Povolotsky]
+        span(style="color: #94F8A4") /
+        span(style="color: #94F8A4") >
+
+        //- h1.personal-info__greeting.-semibold #[span(style="color: #354A57") <] Hi ! #[span(style="color: #94F8A4") /] #[span(style="color: #B94947") >]
+        .personal-info__n
+          span.n__main.-heavy I'M
+          .n__name
+            span.n__lineone.-heavy Boris
+            span.n__linetwo.-heavy Povolotsky
         h3.personal-info__occ.-semibold Front End Developer / Social Worker
       p.personal-info__bg.-ita Looking for my first dev job, while exploring, experimenting and
                               |  mostly having fun building stuff. I currently work as a Social Worker 

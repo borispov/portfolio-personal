@@ -148,24 +148,22 @@ html {
 
 .fade-in {
   animation: fade-in-element !important; }
-  .fade-in:nth-of-type(1) {
-    animation-duration: 1s !important;
-    animation-delay: 2s; }
-  .fade-in:nth-of-type(2n) {
-    animation-duration: 3s !important;
-    animation-delay: 2s; }
-  .fade-in:nth-of-type(3n) {
-    animation-duration: 1s !important;
-    animation-delay: 2s; }
-  .fade-in:nth-of-type(4n) {
-    animation-duration: 2s !important;
-    animation-delay: 2s; }
+  .fade-in:nth-of-type(2) {
+    animation-duration: 1s !important; }
+  .fade-in:nth-of-type(4) {
+    animation-duration: 3s !important; }
+  .fade-in:nth-of-type(6) {
+    animation-duration: 4s !important; }
+  .fade-in:nth-of-type(8) {
+    animation-duration: 2s !important; }
 
 @keyframes fade-in-element {
   from {
+    opacity: 0;
     transform: scale(0, 0); }
   to {
-    transform: scale(1, 1); } }
+    transform: scale(1, 1);
+    opacity: 1; } }
 
 .-ita {
   font-style: italic !important; }
@@ -205,49 +203,69 @@ html {
 
 .main {
   position: relative;
-  display: flex;
+  display: row;
   min-height: 100vh;
-  background-color: #CC443D;
   background-color: rgba(130, 59, 23, 0.72);
-  padding-top: 22vh;
+  background-color: #ffffff;
+  padding-top: 14vh;
   justify-content: center;
-  padding-bottom: 22vh; }
+  padding-bottom: 18vh;
+  text-align: center; }
 
 .personal {
   display: flex;
-  flex-flow: row wrap;
-  flex: 0 1 auto;
+  flex-flow: column wrap;
   padding-left: calc(100vw * 0.15);
   padding-right: calc(100vw * 0.15);
   justify-content: space-between; }
   .personal .personal-info {
-    order: 1;
-    max-width: 970px;
-    display: flex;
-    flex-flow: column wrap;
-    flex-basis: 15em; }
+    max-width: 970px; }
     .personal .personal-info__greeting {
       color: #ffffff;
+      color: #253540;
       font-size: 58px;
       padding-bottom: 50px;
       line-height: 1; }
+    .personal .personal-info__n {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      height: 60px;
+      align-items: center;
+      margin-bottom: 12px; }
+      .personal .personal-info__n .n__main {
+        align-items: center;
+        font-size: 5rem;
+        color: #354A57;
+        font-weight: bold;
+        font-family: 'Montserrat'; }
+      .personal .personal-info__n .n__name {
+        font-size: 2.2rem;
+        font-family: 'Montserrat';
+        font-weight: 700;
+        display: flex;
+        color: #253540;
+        flex-flow: column wrap;
+        justify-content: space-between;
+        height: 52px;
+        text-align: left !important; }
     .personal .personal-info__name {
       color: #354A57;
       text-decoration-line: underline;
-      line-height: 1.5; }
+      line-height: 1.35; }
     .personal .personal-info__occ {
       color: #FFFDFA;
-      line-height: 1.35; }
+      line-height: 1.4; }
   .personal .personal-info__bg {
-    flex-basis: 70%;
-    flex-shrink: 1;
-    order: 3;
-    max-width: 70%;
+    line-height: 1.25;
+    max-width: 65%;
     color: #fff1db;
-    font-size: 1.38em; }
+    color: #3f5767;
+    font-size: 1.38em;
+    margin: 0 auto;
+    margin-bottom: 25px; }
   .personal .personal-img {
     animation: fade-in-element 0.4s;
-    order: 2;
     flex-shrink: 0;
     flex-basis: 10em; }
     .personal .personal-img__photo {
@@ -261,7 +279,8 @@ html {
       box-shadow: 0 3px 6px 2px rgba(0, 0, 0, 0.16);
       opacity: 0.62;
       filter: alpha(opacity=62);
-      max-width: 100%; }
+      max-width: 100%;
+      margin: 0 auto; }
 
 @media (max-width: 780px) {
   .main {
@@ -329,18 +348,22 @@ html {
     box-shadow: 0 3px 6px 6px rgba(20, 20, 20, 0.08);
     max-width: 300px;
     height: 350px;
-    border-radius: 4px; }
+    border-radius: 4px;
+    transition: all 0.2s ease-in-out; }
     .cards .card:hover {
-      border-radius: 8px; }
+      border-radius: 8px;
+      transition: all 0.3s ease-in-out; }
       .cards .card:hover:after {
         border-radius: 8px;
+        transition: all 0.1s ease-in-out;
         opacity: 0.8;
         filter: blur(1px); }
     .cards .card:after {
+      transition: all 0.2s ease-in-out;
       content: '';
       position: absolute;
-      background: #5912a1;
-      background: #141419;
+      background: #400d73;
+      background: #14191c;
       opacity: 0.2;
       left: 0;
       right: 0;

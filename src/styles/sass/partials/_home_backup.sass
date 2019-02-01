@@ -2,82 +2,54 @@
   position: relative
   display: row
   min-height: 100vh
+  background-color: $main-red
   background-color: hsla(20, 70%, 30, 0.72)
-  background-color: $white-pure
-  padding-top: 14vh
+  // background-color: $light-grey
+  padding-top: 22vh
   justify-content: center
-  padding-bottom: 18vh
-  text-align: center
+  padding-bottom: 22vh
 
 .personal
   display: flex
-  flex-flow: column wrap
+  flex-flow: row wrap
   // flex: 0 1 auto
   padding-left: calc(100vw * 0.15)
   padding-right: calc(100vw * 0.15)
   justify-content: space-between
   .personal-info
-    // order: 1
+    order: 1
     max-width: 970px
-    // display: flex
-    // flex-flow: column wrap
+    display: flex
+    flex-flow: column wrap
     // flex-shrink: 10
-    // flex-basis: 15em
+    flex-basis: 15em
     &__greeting
       color: $white-pure
-      color: $main-metal
+      // color: $main-metal
       font-size: 58px
       padding-bottom: 50px
       line-height: 1
-    &__n
-      display: flex
-      flex-flow: row wrap
-      justify-content: center
-      height: 60px
-      align-items: center
-      margin-bottom: 12px
-      .n__main
-        align-items: center
-        font-size: 5rem
-        color: $main-text
-        font-weight: bold
-        font-family: 'Montserrat'
-      .n__name
-        font-size: 2.2rem
-        font-family: 'Montserrat'
-        font-weight: 700
-        display: flex
-        color: $main-metal
-        flex-flow: column wrap
-        // align-items: center
-        justify-content: space-between
-        height: 52px
-        text-align: left !important
     &__name
       color: $main-text
       // color: $main-metal
       text-decoration-line: underline
-      line-height: 1.35
+      line-height: 1.5
     &__occ
       color: $white-text
       // color: $white-pure
-      line-height: 1.4
+      line-height: 1.35
   .personal-info__bg
-    // flex-basis: 70%
-    // flex-shrink: 1
-    // order: 3
-    line-height: 1.25
-    // max-width: 70%
-    max-width: 65%
+    flex-basis: 70%
+    flex-shrink: 1
+    order: 3
+    max-width: 70%
     color: darken($white-text, 6)
-    color: $bg-3
+    // color: $bg-3
     font-size: 1.38em
-    margin: 0 auto
-    margin-bottom: 25px
 
   .personal-img
     animation: fade-in-element 0.4s
-    // order: 2
+    order: 2
     flex-shrink: 0
     flex-basis: 10em
     // background-color: $main-red
@@ -91,7 +63,6 @@
       box-shadow: 0 3px 6px 2px rgba(0,0,0,0.16)
       +opacity(0.62)
       max-width: 100%
-      margin: 0 auto
 
 @media (max-width: 780px)
   .main
