@@ -147,69 +147,25 @@ html {
   opacity: 0 !important; }
 
 .fade-in {
-  animation: 4s fade-in-element !important; }
-
-.card {
-  animation: fade-in-element; }
-  .card:nth-child(1) {
-    animation-delay: 0.05s; }
-
-.card {
-  animation: fade-in-element; }
-  .card:nth-child(2) {
-    animation-delay: 0.1s; }
-
-.card {
-  animation: fade-in-element; }
-  .card:nth-child(3) {
-    animation-delay: 0.15s; }
-
-.card {
-  animation: fade-in-element; }
-  .card:nth-child(4) {
-    animation-delay: 0.2s; }
-
-.card {
-  animation: fade-in-element; }
-  .card:nth-child(5) {
-    animation-delay: 0.25s; }
-
-.card {
-  animation: fade-in-element; }
-  .card:nth-child(6) {
-    animation-delay: 0.3s; }
-
-.card {
-  animation: fade-in-element; }
-  .card:nth-child(7) {
-    animation-delay: 0.35s; }
-
-.card {
-  animation: fade-in-element; }
-  .card:nth-child(8) {
-    animation-delay: 0.4s; }
-
-.card {
-  animation: fade-in-element; }
-  .card:nth-child(9) {
-    animation-delay: 0.45s; }
-
-.card {
-  animation: fade-in-element; }
-  .card:nth-child(10) {
-    animation-delay: 0.5s; }
-
-.card {
-  animation: fade-in-element; }
-  .card:nth-child(11) {
-    animation-delay: 0.55s; }
+  animation: fade-in-element !important; }
+  .fade-in:nth-of-type(1) {
+    animation-duration: 1s !important;
+    animation-delay: 2s; }
+  .fade-in:nth-of-type(2n) {
+    animation-duration: 3s !important;
+    animation-delay: 2s; }
+  .fade-in:nth-of-type(3n) {
+    animation-duration: 1s !important;
+    animation-delay: 2s; }
+  .fade-in:nth-of-type(4n) {
+    animation-duration: 2s !important;
+    animation-delay: 2s; }
 
 @keyframes fade-in-element {
   from {
-    opacity: 0;
-    transform: scale(0.7, 0.7); }
+    transform: scale(0, 0); }
   to {
-    opacity: 1; } }
+    transform: scale(1, 1); } }
 
 .-ita {
   font-style: italic !important; }
@@ -381,7 +337,6 @@ html {
         opacity: 0.8;
         filter: blur(1px); }
     .cards .card:after {
-      transition: all 0.2s ease-in-out;
       content: '';
       position: absolute;
       background: #5912a1;

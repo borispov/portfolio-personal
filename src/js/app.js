@@ -75,7 +75,7 @@ const smoothScroll = () => {
 }
 
 window.onload = function() {
-  animeScrolledTo().init()
+  // animeScrolledTo().init()
   smoothScroll()
   const arrowScroll = document.querySelectorAll('.downarrow')
   for (x of arrowScroll) {
