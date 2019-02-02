@@ -206,7 +206,7 @@ html {
   display: row;
   min-height: 100vh;
   background-color: rgba(130, 59, 23, 0.72);
-  background-color: #ffffff;
+  background-color: #d18383;
   padding-top: 14vh;
   justify-content: center;
   padding-bottom: 18vh;
@@ -221,11 +221,24 @@ html {
   .personal .personal-info {
     max-width: 970px; }
     .personal .personal-info__greeting {
-      color: #ffffff;
-      color: #253540;
-      font-size: 58px;
+      color: #D0CCC6;
+      font-size: 3.5rem;
+      font-weight: bold;
       padding-bottom: 50px;
-      line-height: 1; }
+      line-height: 1;
+      display: inline-block;
+      margin-left: 15px;
+      margin-right: 15px;
+      font-family: 'Montserrat'; }
+    .personal .personal-info .tags {
+      color: #253540;
+      font-weight: bold;
+      font-size: 48px;
+      font-family: 'Montserrat'; }
+      .personal .personal-info .tags:nth-of-type(2) {
+        color: #253540; }
+      .personal .personal-info .tags:nth-of-type(3) {
+        color: #253540; }
     .personal .personal-info__n {
       display: flex;
       flex-flow: row wrap;

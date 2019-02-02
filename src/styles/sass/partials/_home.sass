@@ -3,7 +3,7 @@
   display: row
   min-height: 100vh
   background-color: hsla(20, 70%, 30, 0.72)
-  background-color: $white-pure
+  background-color: #d18383
   padding-top: 14vh
   justify-content: center
   padding-bottom: 18vh
@@ -24,11 +24,25 @@
     // flex-shrink: 10
     // flex-basis: 15em
     &__greeting
-      color: $white-pure
-      color: $main-metal
-      font-size: 58px
+      color: $light-grey
+      font-size: 3.5rem
+      font-weight: bold
       padding-bottom: 50px
       line-height: 1
+      display: inline-block
+      margin-left: 15px
+      margin-right: 15px
+      font-family: 'Montserrat'
+    .tags
+      color: $main-metal
+      &:nth-of-type(2)
+        color: $main-metal
+      &:nth-of-type(3)
+        color: $main-metal
+      font-weight: bold
+      font-size: 48px
+      font-family: 'Montserrat'
+
     &__n
       display: flex
       flex-flow: row wrap
