@@ -6,9 +6,9 @@
 //-   }
 //- }
 
-mixin card(title, description, demoLink, gitLink, thumbpic)
+mixin card(title, description, demoLink, gitLink, thumbpic, klass)
   .card__layer
-  .card(style={background: 'url(' + thumbpic + ')'}).fade-in
+  .card(class=klass style={background: 'url(' + thumbpic + ')'}).fade-in
     .card__content
       h4.card__title= title
       .card__thumbnail

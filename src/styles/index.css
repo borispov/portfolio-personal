@@ -165,6 +165,10 @@ html {
     transform: scale(1, 1);
     opacity: 1; } }
 
+.fit {
+  background-size: fit !important;
+  background-position: center !important; }
+
 .-ita {
   font-style: italic !important; }
 
