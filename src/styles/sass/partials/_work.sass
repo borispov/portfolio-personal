@@ -9,6 +9,7 @@
   background-color: #253540
   // background-image: $hero-pattern
   background: url('../assets/img/pat.svg')
+  border-radius: 25%
   
 .portfolio
   position: relative
@@ -17,8 +18,13 @@
   background: linear-gradient(to bottom, $main-metal 40%, $main-charcoal 90%)
   min-height: 100vh
   &__title
-    font-size: 2rem
+    font-size: 3.2rem
+    font-style: italic
+    font-family: 'Montserrat'
+    letter-spacing: 4px
+    text-shadow: 1px 10px 8px rgba(0,0,0,0.4)
     color: $white-text
+  
     text-align: center
     padding-bottom: 50px
 
@@ -73,7 +79,6 @@
         opacity: 1
     .card__icons
       text-align: center
-      color: $main-red
       color: $white-pure
       .iconz
         font-size: 2em

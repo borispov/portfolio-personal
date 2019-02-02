@@ -22,8 +22,7 @@
     <div class="main" id="home">
       <div class="ui container">
         <div class="personal">
-          <div class="personal-info"><span class="tags">&lt;</span>
-            <h1 class="personal-info__greeting -semibold">Hi !</h1><span class="tags">/</span><span class="tags">&gt;</span>
+          <div class="personal-info"><span class="tags">&lt;</span><span class="personal-info__greeting -semibold">Hi !</span><span class="tags">/</span><span class="tags">&gt;</span>
             <div class="personal-info__n"><span class="n__main -heavy">I'M</span>
               <div class="n__name"><span class="n__lineone -heavy">Boris</span><span class="n__linetwo -heavy">Povolotsky</span></div>
             </div>
@@ -45,10 +44,10 @@
     </div>
     <section class="portfolio" id="portfolio">
       <div class="frame">
-        <h2 class="portfolio__title">My Latest Works</h2>
+        <h2 class="portfolio__title">Portfolio</h2>
         <div class="cards">
               <div class="card__layer"></div>
-              <div class="card fade-in" style="background:url(./assets/img/linda.png);">
+              <div class="card fade-in" id="fit" style="background:url(./assets/img/linda.png);">
                 <div class="card__content">
                   <h4 class="card__title">Linda</h4>
                   <div class="card__thumbnail">
@@ -84,7 +83,7 @@
                 </div>
               </div>
               <div class="card__layer"></div>
-              <div class="card fit fade-in" style="background:url(./assets/img/portfo-thumb.jpg);">
+              <div class="card fade-in" id="fit" style="background:url(./assets/img/portfo-thumb.jpg);">
                 <div class="card__content">
                   <h4 class="card__title">Personal Website</h4>
                   <div class="card__thumbnail">
@@ -107,21 +106,22 @@
           <div class="arrow"></div></a></div>
     </section>
     <section class="project-section" id="portfolio2">
-      <div class="ui container">
+      <div class="containerz">
         <h1 class="title -heavy -ita">More Projects</h1>
         <div class="containerflex">
           <div class="projects">
             <div class="project"><a class="project__link" href="https://github.com/borispov/phone-fmt">
-                <h3 class="project__title">“ phone-fmt “ </h3></a>
-              <p class="project__para">NPM Package - validate & format israeli numbers</p>
+                <h3 class="project__title">phone-fmt</h3></a>
+              <!-- p.project__para NPM Package - validate & format israeli numbers-->
+              <p class="project__para">Phone formatter is a NPM package which allows the user to format a given phone number, return it with spacing according to international convention. Currently format israeli numbers only.</p>
             </div>
             <div class="project"><a class="project__link" href="https://github.com/borispov/weather-app">
-                <h3 class="project__title">“ Weather App "</h3></a>
-              <p class="project__para">5 days forecast based on location & search option.</p>
+                <h3 class="project__title">Weather App</h3></a>
+              <p class="project__para">Five days weather forecast based on location with search query option. Takes advantage of google's geolocation, isn't implemented for mobile devices though. Makes use of Weatherbit.io free API. The app was built with Reactjs.</p>
             </div>
             <div class="project"><a class="project__link" href="https://github.com/borispov/Tomatoro-pomadoro">
-                <h3 class="project__title">“ Tomatoro Pomadoro "</h3></a>
-              <p class="project__para">Pomodoro Clock, built for React practice.</p>
+                <h3 class="project__title">Tomatoro Pomadoro </h3></a>
+              <p class="project__para">A simple Pomodoro Clock app with React implementation. Was built quite fast for practice purposes only.      </p>
             </div>
           </div>
           <div class="link-github">

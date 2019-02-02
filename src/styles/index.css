@@ -165,9 +165,8 @@ html {
     transform: scale(1, 1);
     opacity: 1; } }
 
-.fit {
-  background-size: fit !important;
-  background-position: center !important; }
+#fit {
+  background-size: 300px 350px !important; }
 
 .-ita {
   font-style: italic !important; }
@@ -331,7 +330,8 @@ html {
   margin-right: 150px;
   padding: 4em 5em;
   background-color: #253540;
-  background: url("../assets/img/pat.svg"); }
+  background: url("../assets/img/pat.svg");
+  border-radius: 25%; }
   @media (max-width: 1200px) {
     .frame {
       margin-left: calc(100vw * 0.05);
@@ -344,7 +344,11 @@ html {
   background: linear-gradient(to bottom, #253540 40%, #354A57 90%);
   min-height: 100vh; }
   .portfolio__title {
-    font-size: 2rem;
+    font-size: 3.2rem;
+    font-style: italic;
+    font-family: 'Montserrat';
+    letter-spacing: 4px;
+    text-shadow: 1px 10px 8px rgba(0, 0, 0, 0.4);
     color: #FFFDFA;
     text-align: center;
     padding-bottom: 50px; }
@@ -396,7 +400,6 @@ html {
         opacity: 1; }
     .cards .card .card__icons {
       text-align: center;
-      color: #CC443D;
       color: #ffffff; }
       .cards .card .card__icons .iconz {
         font-size: 2em; }
@@ -436,41 +439,57 @@ html {
     margin-left: 0;
     margin-right: 0; } }
 
+.containerz {
+  max-width: 1200px;
+  margin: 0 auto; }
+
 .project-section {
   background: #d8d8d6;
-  padding-top: 15vh;
-  min-height: 100vh; }
+  padding-top: 10vh; }
   .project-section .title {
-    text-align: center; }
+    text-align: center;
+    color: #354a57; }
   .project-section .containerflex {
     display: flex;
-    margin: 4em auto 0;
+    flex-flow: column wrap;
+    margin: 1em auto 0;
     width: calc(100% - 15em);
     justify-content: space-between; }
   .project-section .projects {
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: row wrap;
+    justify-content: center;
     margin: 4em auto; }
   .project-section .project {
-    margin: 1em 0;
-    max-width: 420px; }
+    background: #d18383;
+    box-shadow: 0px 4px 12px 6px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    margin: 1em 6px;
+    max-width: 250px;
+    padding: 14px 18px 4px; }
     .project-section .project .project__link {
-      color: #CC443D; }
+      color: #CC443D;
+      color: #d18383;
+      color: #354A57; }
     .project-section .project .project__title {
+      text-align: center;
       text-shadow: 0 2px 4px rgba(20, 20, 20, 0.08);
       text-decoration: underline; }
     .project-section .project .project__para {
       padding-top: 7px;
       padding-bottom: 14px;
       color: #354A57;
-      max-width: 420px;
-      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); }
+      color: #D0CCC6;
+      color: #354A57;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+      font-size: 16px; }
   .project-section .link-github {
+    display: block;
     font-family: 'Montserrat';
-    margin-top: 5em;
+    text-align: center;
     color: #354A57;
-    font-style: italic;
-    max-width: 420px; }
+    padding-bottom: 4.2em;
+    font-style: italic; }
     .project-section .link-github__link {
       padding-top: 3px;
       font-size: 2.2em;
@@ -484,8 +503,7 @@ html {
   .containerflex {
     display: flex;
     width: 100%;
-    max-width: 100%;
-    flex-direction: column; }
+    max-width: 100%; }
   .project {
     width: auto;
     max-width: auto; }
@@ -503,10 +521,6 @@ html {
     display: block; }
   .projects {
     display: block; } }
-
-@media (min-width: 1025px) {
-  .projects {
-    width: calc(100% - 20em); } }
 
 @media (max-width: 768px) {
   .containerflex {
@@ -528,7 +542,7 @@ html {
     display: flex;
     flex-flow: row-reverse;
     justify-content: center;
-    padding-top: 25vh; }
+    padding-top: 12vh; }
     .contact .contact-sections .general {
       flex-basis: 500px;
       margin: 0 40px;
@@ -587,15 +601,10 @@ html {
         text-align: center; }
         .contact .contact-sections .general .general__name {
           margin-bottom: 18px; }
-        .contact .contact-sections .general .flex-mobile {
-          display: flex;
-          flex-direction: row nowrap;
-          justify-content: center; }
         .contact .contact-sections .general .general__occ {
-          margin-right: 30px;
           margin-bottom: 20px; }
         .contact .contact-sections .general .general__location {
-          margin-left: 30px; }
+          margin: 0; }
       .contact .contact-sections .social {
         text-align: center; }
         .contact .contact-sections .social .social__title {
